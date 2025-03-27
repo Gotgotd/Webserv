@@ -16,7 +16,8 @@
 
 ## Introduction
 
-**Webserv** is an Ecole 42 project that involves building a simple HTTP server in C++98. Inspired by Nginx, Webserv handles client requests, serves static files, and supports dynamic content processing. Through **Webserv**, you will gain hands-on experience with socket programming, HTTP parsing, multiplexing, and server configurations. With two great teammates, Kelly Brener-Raffali [https://github.com/KellyBRENER] and Gautier Daigneau [https://github.com/Gotgotd], we successfully completed this team project with a score of 125%.
+**Webserv** is an Ecole 42 project that involves building a simple HTTP server in C++98. Inspired by Nginx, Webserv handles client requests, serves static files, and supports dynamic content processing. Through **Webserv**, you will gain hands-on experience with socket programming, HTTP parsing, multiplexing, and server configurations. With two great teammates, Kelly Brener-Raffali [https://github.com/KellyBRENER] and Daram Bae [https://github.com/darambae], we successfully completed this team project with a score of 125%.
+For the full history of the project, you can refer to Daram's repository : [https://github.com/darambae/Webserv]
 
 ---
 
@@ -155,7 +156,8 @@ server {
 
 **Webserv** est un projet de l'École 42 visant à développer un serveur HTTP simple en C++98. Inspiré de Nginx, Webserv gère les requêtes clients, sert des fichiers statiques et prend en charge le traitement dynamique des contenus.
 
-Avec deux coéquipiers formidables, Kelly Brener-Raffali [https://github.com/KellyBRENER] et Gautier Daigneau [https://github.com/Gotgotd], nous avons réussi ce projet d'équipe avec un score de 125 %.
+Avec mes deux coéquipieres, Kelly Brener-Raffali [https://github.com/KellyBRENER] et Daram Bae [https://github.com/Gotgotd], nous avons réussi ce projet d'équipe avec un score de 125 %.
+Pour l'historique complet du projet, vous pouvez vous référer au repository de Daram : [https://github.com/darambae/Webserv]
 
 ---
 
