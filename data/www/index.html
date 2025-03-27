@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webserv Project</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Webserv</h1>
+    </header>
+    <main>
+        <section id="upload">
+            <h2>Add profile picture</h2>
+            <p>Choose an image file to upload (Only jpg, jpeg, png accepted)</p>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="avatar" id="avatar" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="add-result">
+            <h2>Add new game</h2>
+            <br>
+            <form action="scoreTableChateauCombo.html" method="get">
+				<button type="submit">Add</button>
+            </form>
+            <br>
+            <h4>Review the games you added</h4>
+            <form action="/cgi-bin/get_client_historic.py" method="get" onsubmit="return checkCookies(event)">
+                <button type="submit">Go</button>
+            </form>
+        </section>
+        <section id="history">
+            <h2>Play History</h2>
+            <h4>Load games</h4>
+            <form action="/cgi-bin/load_game.py" method="get">
+                <input type="hidden" name="dummy" value="1">
+                <button type="submit">Load</button>
+            </form>
+            <br>
+            <h4>Choose a player id</h4>
+            <form action="/cgi-bin/get_player_data.py" method="get">
+                <input type="text" name="player_id" id="player_id" required>
+                <button type="submit">Send</button>
+            </form>
+            <br>
+            <h4>Choose a game id</h4>
+            <form action="/cgi-bin/get_game_data.py" method="get">
+                <input type="text" name="game_id" id="game_id" required>
+                <button type="submit">Send</button>
+            </form>
+			<br>
+            <script src="/static/cookies.js"></script>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Webserv Project. All rights reserved.</p>
+    </footer>
+    <!--cookie pop-up window -->
+
+    <div class="cookie-popup" id="cookiePopup">
+        <p>Do you want a cookie ? Take a cookie. Cookies are good. Accept my cookie</p>
+        <button class="accept-btn" onclick="acceptCookies()">Accept</button>
+        <button class="decline-btn" onclick="declineCookies()">Decline</button>
+    </div>
+
+    <script src="/static/cookies.js"></script>
+    <button id="randomButton" onclick="window.location.href='/redirect'">Redirection</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            function setRandomPosition() {
+                let button = document.getElementById('randomButton');
+                button.style.position = 'absolute';
+                let screenWidth = window.innerWidth - button.offsetWidth;
+                let screenHeight = window.innerHeight - button.offsetHeight;
+                let randomX = Math.floor(Math.random() * screenWidth);
+                let randomY = Math.floor(Math.random() * screenHeight);
+                button.style.left = `${randomX}px`;
+                button.style.top = `${randomY}px`;
+            }
+            setRandomPosition();
+            window.addEventListener('resize', setRandomPosition);
+        });
+    </script>
+</body>
+</html>
