@@ -209,11 +209,11 @@ server {
 
 ### `POST`
 
-- **Utilisation** : Envoi de données au serveur (téléversement d'une image).
+- **Utilisation** : Envoi de données au serveur (chargement d'une image sur le serveur).
 
 ### `DELETE`
 
-- **Utilisation** : Suppression d'une ressource (suppression de l'image téléversée).
+- **Utilisation** : Suppression d'une ressource (suppression de l'image chargée).
 - ***Remarque*** : Les formulaires HTML ne prennent pas en charge la méthode DELETE, donc la suppression est gérée en utilisant le nom et la valeur des champs du formulaire.
 ---
 
