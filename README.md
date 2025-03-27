@@ -1,6 +1,6 @@
 # Webserv
 
-> **Versions**: [English](#webserv) | [Français](#webserv-🇫🇷) | [한국어](#webserv-🇰🇷)
+> **Versions**: [English](#webserv) | [Français](#webserv-fr) | [한국어](#webserv-ko)
 
 ## Table of Contents
 
@@ -142,7 +142,7 @@ server {
 
 ---
 
-# Webserv 🇫🇷
+# Webserv FR
 
 ## Table des Matières
 
@@ -217,7 +217,7 @@ server {
 - ***Remarque*** : Les formulaires HTML ne prennent pas en charge la méthode DELETE, donc la suppression est gérée en utilisant le nom et la valeur des champs du formulaire.
 ---
 
-# Webserv 🇰🇷
+# Webserv KO
 
 ## 목차
 
