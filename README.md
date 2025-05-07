@@ -1,6 +1,6 @@
 # Webserv
 
-> **Versions**: [English](#webserv) | [Français](#webserv-fr) | [한국어](#webserv-ko)
+> **Versions**: [English](#webserv) | [Français](#webserv-fr)
 
 ## Table of Contents
 
@@ -216,80 +216,5 @@ server {
 - **Utilisation** : Suppression d'une ressource (suppression de l'image chargée).
 - ***Remarque*** : Les formulaires HTML ne prennent pas en charge la méthode DELETE, donc la suppression est gérée en utilisant le nom et la valeur des champs du formulaire.
 ---
-
-# Webserv KO
-
-## 목차
-
-- [소개](#소개)
-- [기능](#기능)
-- [설정](#설정)
-- [요청 처리 과정](#요청-처리-과정)
-- [지원되는 HTTP 메소드](#지원되는-http-메소드)
-
----
-
-## 소개
-
-**Webserv**는 Ecole 42 프로젝트로, C++98을 사용하여 간단한 HTTP 서버를 구축하는 과제입니다. Nginx의 작동방식을 토대로 클라이언트 요청을 처리하고 정적 파일을 제공하며, python과 php로 작성한 CGI 프로그램을 통해 동적 콘텐츠를 처리하였습니다. 저희는 구글 크롬을 프로젝트의 기본 브라우저로 사용하였고, 리눅스 우분투에서 실행이 가능합니다.
-훌륭한 두 팀원들, Kelly Brener-Raffali [https://github.com/KellyBRENER]와 Gautier Daigneau [https://github.com/Gotgotd] 덕분에 프로젝트를 성공적으로 완료하여 125%의 점수를 받았습니다.
-
----
-
-## 기능
-
-- **다중 클라이언트 처리**: 비동기 소켓과 `poll()`을 사용하여 다중 요청을 처리합니다.
-- **HTTP/1.1 지원**: 요청 파싱, 응답 처리 및 상태 코드 구현.
-- **구성 가능 서버**: 설정 파일을 통해 포트, 루트 디렉토리, 오류 페이지 등을 정의할 수 있습니다.
-- **정적 파일 제공**: HTML, CSS, JavaScript 및 기타 정적 리소스를 제공합니다.
-- **CGI 지원**: PHP 및 Python 스크립트 실행 가능.
-- **오류 관리**: 올바르지 않은 요청이나 누락된 리소스에 대해 적절한 HTTP 상태 코드를 반환합니다.
-
----
-
-## 설정
-
-**예제 설정 파일:**
-
-```conf
-server {
-    listen 8080;
-    server_name myserver;
-    root /var/www/html;
-    index index.html;
-    error_page 404 /errors/404.html;
-}
-```
-
----
-
-## Flowchart
-![Flowchart](documentation/Flowchart.jpg)
-
-## 요청 처리 과정
-
-1. **클라이언트 연결**
-2. **요청 파싱**
-3. **라우팅 처리**
-4. **응답 생성**
-5. **응답 전송**
-6. **연결 종료**
-
----
-
-## 지원되는 HTTP 메소드
-
-### `GET`
-
-- **사용법**: 리소스 요청.
-
-### `POST`
-
-- **사용법**: 이미지 파일 업로드 및 바디에 포함된 데이터 전송.
-
-### `DELETE`
-
-- **사용법**: 업로드한 이미지 파일을 삭제.
-- ***주의 사항***: html의 form은 delete method를 지원하지 않아, form의 name과 value를 이용해 delete을 처리함.
 
 
